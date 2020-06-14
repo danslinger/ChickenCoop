@@ -41,7 +41,10 @@ def setSunJobs(cron, data, sunriseJob, sunsetJob):
     sunriseJobTime = (localSunrise + datetime.timedelta(minutes=SUNRISE_DELTA)).time()
     sunsetJobTime = (localSunset+ datetime.timedelta(minutes=SUNSET_DELTA)).time() 
 
-
+    # Chickens are small right now.  If its before 0700, don't open it yet.  Wait until them
+    if sunriseJobTime.hour < 7:
+        sunriseJobTime = datetime.time(7,0,0)
+    
     sunriseJob.setall(sunriseJobTime)
     sunsetJob.setall(sunsetJobTime)
     cron.write()
