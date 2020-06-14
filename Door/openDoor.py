@@ -13,7 +13,7 @@ def main():
     fh.setFormatter(formatter)
     logger.addHandler(fh)
 
-    door = Door(19. 26, 16, 20)
+    door = Door(19, 26, 16, 20)
     try:
         result = door.openDoor()
         logger.info(result)

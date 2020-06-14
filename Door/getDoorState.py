@@ -3,7 +3,7 @@ from Door import Door
 
 
 def main():
-    door = Door(19. 26, 16, 20)
+    door = Door(19, 26, 16, 20)
 
     try:
         doorStatus = door.getDoorStatus()
