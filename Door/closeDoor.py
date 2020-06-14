@@ -2,6 +2,7 @@
 from Door import Door
 import logging
 
+
 def main():
     # Call getLogger with no args to set up the handler
     logger = logging.getLogger()
@@ -24,8 +25,5 @@ def main():
     return
 
 
-
-
 if __name__ == '__main__':
     main()
-
