@@ -2,6 +2,7 @@
 from Door import Door
 import logging
 
+
 def main():
     # Call getLogger with no args to set up the handler
     logger = logging.getLogger()
@@ -12,7 +13,7 @@ def main():
     fh.setFormatter(formatter)
     logger.addHandler(fh)
 
-    door = Door(17, 4, 24, 18)
+    door = Door(19. 26, 16, 20)
     try:
         result = door.openDoor()
         logger.info(result)
@@ -24,8 +25,5 @@ def main():
     return
 
 
-
-
 if __name__ == '__main__':
     main()
-
